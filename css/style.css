@@ -1,0 +1,323 @@
+/* Importando uma fonte do Google Fonts para um visual mais elegante */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* --- Reset Básico e Padrões Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* --- Cabeçalho e Navegação --- */
+.main-header {
+    background-color: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0a2c4e; /* Um tom de azul corporativo */
+}
+
+.logo i {
+    margin-right: 8px;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #1e88e5;
+}
+
+/* --- Seção Herói (Banner Principal) --- */
+.hero {
+    height: 90vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    padding: 2rem;
+    border-radius: 10px;
+    color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.hero-content:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #0a2c4e;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1e88e5;
+}
+
+/* --- Seção de Produtos em Destaque --- */
+.featured-products {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.featured-products h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0a2c4e;
+}
+
+/* --- Rodapé --- */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.main-footer p {
+    font-size: 0.9rem;
+}
+
+.content {
+    
+}
+
+/* --- Estilos do Modal --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 1200;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+.main-image-container {
+    flex: 1; /* Faz o container da imagem principal crescer para preencher o espaço */
+    min-height: 0; /* Essencial para que o flexbox possa encolher o container corretamente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    overflow: hidden; /* Essencial para o efeito de zoom/pan */
+}
+
+#main-modal-image, .main-modal-video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* transition: transform 0.2s ease-out; /* Suaviza o zoom/pan - only for images */
+}
+
+.main-image-container iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+#main-modal-image {
+    cursor: grab; /* Indica que a imagem pode ser movida */
+    transition: transform 0.2s ease-out; /* Suaviza o zoom/pan */
+}
+
+.thumbnail-gallery {
+    flex-shrink: 0; /* Impede que a galeria de miniaturas encolha */
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 5px; /* Pequeno padding inferior */
+    transform-origin: center center;
+    cursor: grab;
+}
+
+.thumbnail-gallery img,
+.thumbnail-gallery video {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.thumbnail-gallery img:hover,
+.thumbnail-gallery video:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.thumbnail-gallery img.active,
+.thumbnail-gallery video.active {
+    border: 2px solid #0a2c4e;
+    box-shadow: 0 0 8px rgba(10, 44, 78, 0.5);
+}
