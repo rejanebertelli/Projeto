@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitrine Sul Imóveis - Encontre seu Lar</title>
-    
+    <title>Vitrine Sul Imóveis</title>
+
     <!-- Biblioteca de Ícones Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
+
     <!-- Link para sua Folha de Estilos CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header class="main-header">
         <div class="container">
-            <a href="#" class="logo"><i class="fa-solid fa-building"></i>Vitrine Sul Imóveis</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Imóveis</a></li>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+                        <a href="#" class="logo"><i class="fa-solid fa-building"></i>Vitrine Sul Imóveis</a>
+                        <nav class="main-nav">
+                            <ul>
+                                <li><a href="index.html">Início</a></li>
+                                <li><a href="sobre.html">Sobre</a></li>
+                                <li><a href="contato.html">Contato</a></li>
+                            </ul>
+                        </nav>        </div>
     </header>
 
     <main>
@@ -35,58 +35,60 @@
 
 
 
-        <!-- Seção de Herói (Banner) -->
-        <section class="hero">
-            <video class="hero-video" src="MATERIAL PARA VSCODE/QUARTIER/Tour Virtual - Quartier VDownloader (2).mp4" autoplay loop muted></video>
-            <div class="hero-content">
-                <h2>Encontre o Imóvel dos Seus Sonhos</h2>
-                <h1>BAIRRO QUARTIER</h1>
-                <p>Imóveis na planta, construção e prontos para morar em Pelotas/RS</p>
-            </div>
-        </section>
-
-        <section class="logo-section" style="text-align: center; padding: 4rem 0;">
-            <img src="MATERIAL PARA VSCODE/RB IMOVEIS/HOMEPAGE_LOGO.jpeg" alt="RB Imoveis Logo" style="max-width: 300px; height: auto; display: block; margin: 0 auto;">
-        </section>
-
-        <!-- Seção de Produtos em Destaque -->
-        <section class="featured-products">
-            <div class="container">
-                <h3>Imóveis em Destaque</h3>
-                <div class="products-grid">
-                    <!-- Produto 1 -->
-                    <article class="product-card">
-                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2070" alt="Casa moderna com fachada de vidro">
-                        <div class="product-info">
-                            <h4>Casa Moderna em Condomínio</h4>
-                            <a href="#" class="view-more-button">Ver mais</a>
-                        </div>
-                    </article>
-                    <!-- Produto 2 -->
-                    <article class="product-card">
-                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070" alt="Apartamento espaçoso com varanda">
-                        <div class="product-info">
-                            <h4>Casa em Bairro Nobre</h4>
-                            <a href="#" class="view-more-button">Ver mais</a>
-                        </div>
-                    </article>
-                    <!-- Produto 3 -->
-                    <article class="product-card">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070" alt="Casa térrea com jardim">
-                        <div class="product-info">
-                            <h4>Casa Térrea com Jardim</h4>
-                            <a href="#" class="view-more-button">Ver mais</a>
-                        </div>
-                    </article>
+            <!-- Seção de Herói (Banner) -->
+              <!-- Seção de Herói (Banner) -->
+            <section class="hero">
+            
+                <!-- Wrapper do vídeo (define a área real do vídeo) -->
+                <div class="hero-video-wrapper">
+            
+                    <video id="heroVideo" class="hero-video"
+                        src="MATERIAL PARA VSCODE/QUARTIER/Tour Virtual - Quartier VDownloader (2).mp4" autoplay loop muted
+                        playsinline>
+                    </video>
+            
+                    <div class="sound-control">
+                        <span>Som</span>
+                        <button id="soundToggle" class="sound-toggle" aria-label="Ativar ou desativar som">
+                            <i class="fa-solid fa-volume-xmark"></i>
+                        </button>
+                    </div>
+            
                 </div>
-            </div>
-        </section>
+            
+                <!-- Conteúdo textual sobreposto -->
+                <div class="hero-content">
+                    <h2>BAIRRO QUARTIER EM PELOTAS/RS</h2>
+                    <h1>NA PLANTA, EM CONSTRUÇÃO E PRONTOS PARA MORAR</h1>
+                    <p>
+                        Imóveis que combinam luxo,
+                        conforto e design inovador.<br>
+                        Viva a experiência de morar em um lugar que reflete seu estilo de vida.
+                    </p>
+                </div>
+            
+            </section>
+
+
+            <!-- Seção de Produtos em Destaque -->
+            <section class="featured-products">
+                <div class="container">
+                    <h3>IMÓVEIS EM DESTAQUE</h3>
+                    <a class="logo-link" href="#">
+                        <img src="MATERIAL PARA VSCODE/RB IMOVEIS/HOMEPAGE_LOGO.jpeg" alt="RB Imóveis Logo"
+                            style="max-width: 300px; height: auto; display: block; margin: 0 auto;">
+                    </a>
+                    <div class="products-grid">
+
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
 
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2025 Vitrine Sul Imóveis. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Vitrine Sul Imóveis. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -104,92 +106,149 @@
 
     <script>
         const propertiesData = [
-  {
-    "id": 1,
-    "name": "BRISA",
-    "home": "MATERIAL PARA VSCODE/Imoveis/1_BRISA/home.jpg",
-    "youtube_link": "https://youtu.be/ogtI3Q_O--I",
-    "gallery": [
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_1.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_2.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_3.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_4.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_5.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_6.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_7.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_8.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_9.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_10.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_11.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_12.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_13.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_14.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_15.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_16.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_17.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_18.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_19.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_20.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_21.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_22.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_23.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_24.jpg"
-    ]
-  },
-  {
-    "id": 2,
-    "name": "VARANDA",
-    "home": "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/home.jpg",
-    "youtube_link": "https://youtu.be/E4aOIUqeEZA",
-    "gallery": [
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_1.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_2.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_3.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_4.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_5.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_6.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_7.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_8.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_9.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_10.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_11.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_12.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_13.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_14.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_15.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_16.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_17.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_18.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_19.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_20.jpg"
-    ]
-  },
-  {
-    "id": 3,
-    "name": "THE DISTRIKT-WORK",
-    "home": "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/home.jpg",
-    "youtube_link": "https://youtu.be/w9K4FhYR1Rw",
-    "gallery": [
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_1.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_2.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_3.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_4.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_5.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_6.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_7.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_8.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_9.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_10.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_11.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKE_WORK/image_12.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_13.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_14.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_15.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_16.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_17.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT_WORK/image_18.jpg"
-    ]
-  },
+            {
+                "id": 1,
+                "name": "BRISA RESIDÊNCIAS DA ALAMEDA",
+                "home": "MATERIAL PARA VSCODE/Imoveis/1_BRISA/home.jpg",
+                "youtube_link": "https://youtu.be/ogtI3Q_O--I",
+                "gallery": [
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_1.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_2.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_3.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_4.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_5.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_6.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_7.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_8.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_9.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_10.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_11.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_12.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_13.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_14.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_15.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_16.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_17.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_18.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_19.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_20.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_21.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_22.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_23.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_24.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_25.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_26.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_27.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_28.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_29.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_30.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_31.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_32.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_33.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_34.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_35.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_36.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_37.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_38.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_39.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/1_BRISA/image_40.jpg"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Varanda    RESIDÊNCIAS DO BOULEVARD",
+                "home": "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/home.jpg",
+                "youtube_link": "https://youtu.be/E4aOIUqeEZA",
+                "gallery": [
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_1.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_2.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_3.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_4.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_5.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_6.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_7.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_8.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_9.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_10.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_11.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_12.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_13.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_14.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_15.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_16.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_17.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_18.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_19.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_20.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_21.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_22.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_23.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_24.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_25.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_26.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_27.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_28.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_29.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_30.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_31.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_32.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_33.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/2_VARANDA/image_34.jpg"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "THE DISTRIKT",
+                "home": "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/home.jpg",
+                "youtube_link": "https://youtu.be/w9K4FhYR1Rw",
+                "gallery": [
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_1.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_2.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_3.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_4.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_5.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_6.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_7.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_8.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_9.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_10.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_11.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_12.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_13.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_14.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_15.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_16.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_17.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_18.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_19.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_20.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_21.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_22.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_23.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_24.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_25.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_26.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_27.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_28.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_29.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_30.png",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_31.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_32.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_33.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_34.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_35.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_36.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_37.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_38.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_39.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_40.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_41.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_42.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_43.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_44.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/3_THE DISTRIKT/image_45.jpg"
+                ]
+            },/* 
    {
     "id": 4,
     "name": "THE DISTRIKT-LIFE",
@@ -207,7 +266,7 @@
       "MATERIAL PARA VSCODE/Imoveis/4_THE DISTRIKT_LIFE/image_9.jpg",
       "MATERIAL PARA VSCODE/Imoveis/4_THE DISTRIKT_LIFE/image_10.jpg",
       "MATERIAL PARA VSCODE/Imoveis/4_THE DISTRIKT_LIFE/image_11.jpg",
-      "MATERIAL PARA VSCODE/Imoveis/4_THE DISTRIKE_LIFE/image_12.jpg",
+      "MATERIAL PARA VSCODE/Imoveis/4_THE DISTRIKT_LIFE/image_12.jpg",
       "MATERIAL PARA VSCODE/Imoveis/4_THE DISTRIKT_LIFE/image_13.jpg",
       "MATERIAL PARA VSCODE/Imoveis/4_THE DISTRIKT_LIFE/image_14.jpg",
       "MATERIAL PARA VSCODE/Imoveis/4_THE DISTRIKT_LIFE/image_15.jpg",
@@ -227,30 +286,31 @@
       "MATERIAL PARA VSCODE/Imoveis/4_THE DISTRIKT_LIFE/image_29.jpg",
       "MATERIAL PARA VSCODE/Imoveis/4_THE DISTRIKT_LIFE/image_30.jpg"
     ]
-  },
-  {
-    "id": 5,
-    "name": "BLEND OFFICES",
-    "home": "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/home.jpg",
-    "youtube_link": "https://youtu.be/tI2QN84sMSY",
-        "gallery": [
-          "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_1.jpg",
-          "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_2.jpg",
-          "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_3.jpg",
-          "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_4.jpg",
-          "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_5.jpg",
-          "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_6.jpg",
-          "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_7.jpg",
-          "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_8.jpg",
-          "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_9.jpg",
-          "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_10.jpg",
-          "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_11.jpg",
-          "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_12.jpg",
-          "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_13.jpg"
-        ]
-      }
-    ];
+  }, */
+            {
+                "id": 5,
+                "name": "BLEND OFFICES",
+                "home": "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/home.jpg",
+                "youtube_link": "https://youtu.be/tI2QN84sMSY",
+                "gallery": [
+                    "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_1.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_2.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_3.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_4.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_5.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_6.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_7.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_8.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_9.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_10.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_11.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_12.jpg",
+                    "MATERIAL PARA VSCODE/Imoveis/5_BLEND OFFICES/image_13.jpg"
+                ]
+            }
+        ];
     </script>
     <script src="js/script.js"></script>
 </body>
+
 </html>

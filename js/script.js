@@ -344,6 +344,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listeners for panning will be managed on the document level when panning starts
 
-    // Initial check for image load to get natural dimensions - now handled by displayMainMedia for images
-    // mainModalImage.onload is removed
+    // --- CONTROLE DE SOM DO VÍDEO HERO ---
+    const video = document.getElementById("heroVideo");
+    const soundBtn = document.getElementById("soundToggle");
+
+    if (video && soundBtn) {
+        const icon = soundBtn.querySelector("i");
+
+        soundBtn.addEventListener("click", () => {
+            if (video.muted) {
+                video.muted = false;
+                video.volume = 1;
+                icon.classList.remove("fa-volume-xmark");
+                icon.classList.add("fa-volume-high");
+            } else {
+                video.muted = true;
+                icon.classList.remove("fa-volume-high");
+                icon.classList.add("fa-volume-xmark");
+            }
+        });
+    }
+
+
+
+
 });
