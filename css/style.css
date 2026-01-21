@@ -378,34 +378,41 @@ img {
     align-items: center;
 }
 
+/* =========================
+   AJUSTES SOMENTE PARA CELULAR
+   ========================= */
 @media (max-width: 768px) {
 
+    /* HERO não força altura no mobile */
     .hero {
-        height: 100vh;
+        height: auto;
+        padding: 0;
     }
 
+    /* Wrapper acompanha o tamanho real do vídeo */
+    .hero-video-wrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    /* VÍDEO RESPONSIVO REAL (sem corte e sem faixas) */
     .hero-video {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: auto;
+        object-fit: unset; /* 🔑 remove comportamento de corte */
+        display: block;    /* 🔑 remove espaços fantasmas */
     }
 
-    /* garante que não apareçam faixas brancas */
-    .hero-video-wrapper {
-        background: black;
-    }
-
-    /* banner aparece ao toque */
     .hero-content {
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.4s ease;
+        display: none;
     }
 
-    .hero:active .hero-content,
-    .hero:focus-within .hero-content {
+    /* Controle de som dentro do vídeo */
+    .sound-control {
         opacity: 1;
         pointer-events: auto;
     }
 }
+
 
