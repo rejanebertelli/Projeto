@@ -99,7 +99,8 @@ img {
 
 
 .hero-content {
-    position: relative;
+    position: absolute;
+    max-width: 90%;
     z-index: 2;
     background-color: transparent;
     padding: 2rem;
