@@ -413,6 +413,39 @@ img {
         opacity: 1;
         pointer-events: auto;
     }
+
+    /* Centraliza o BLOCO inteiro */
+    .contact-info {
+        max-width: 340px;        /* controla a largura visual */
+        margin: 0 auto;          /* 🔑 centraliza na página */
+    }
+
+    /* Cada linha alinhada à esquerda */
+    .contact-info p {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        justify-content: flex-start;
+        text-align: left;
+        flex-wrap: nowrap;
+        margin-bottom: 12px;
+        overflow: hidden;
+    }
+
+    .contact-info p strong {
+        white-space: nowrap;
+        font-size: clamp(0.9rem, 3.5vw, 1rem);
+    }
+
+    .contact-info a {
+        white-space: nowrap;
+        display: inline-block;
+        font-size: clamp(0.9rem, 3.5vw, 1rem);
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
 }
 
 
