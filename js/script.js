@@ -347,22 +347,45 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- CONTROLE DE SOM DO VÍDEO HERO ---
     const video = document.getElementById("heroVideo");
     const soundBtn = document.getElementById("soundToggle");
+    const volumeSlider = document.getElementById("volumeSlider");
 
-    if (video && soundBtn) {
+    if (video && soundBtn && volumeSlider) {
         const icon = soundBtn.querySelector("i");
+        const volumeControl = soundBtn.closest(".sound-volume");
+        const minimumVolume = Number(volumeSlider.min) / 100;
+        let lastAudibleVolume = video.volume || 1;
+
+        const updateSoundControl = () => {
+            const audible = !video.muted && video.volume > 0;
+            volumeControl.classList.toggle("is-audible", audible);
+            volumeSlider.value = Math.round(video.volume * 100);
+            volumeSlider.disabled = !audible;
+            volumeSlider.setAttribute("aria-valuetext", `${volumeSlider.value}%`);
+            soundBtn.setAttribute("aria-label", audible ? "Desativar som" : "Ativar som");
+            soundBtn.setAttribute("aria-pressed", String(audible));
+            icon.classList.toggle("fa-volume-xmark", !audible);
+            icon.classList.toggle("fa-volume-low", audible && video.volume < 0.5);
+            icon.classList.toggle("fa-volume-high", audible && video.volume >= 0.5);
+            if (video.volume > 0) lastAudibleVolume = video.volume;
+        };
 
         soundBtn.addEventListener("click", () => {
-            if (video.muted) {
+            if (video.muted || video.volume === 0) {
+                if (video.volume === 0) video.volume = lastAudibleVolume;
                 video.muted = false;
-                video.volume = 1;
-                icon.classList.remove("fa-volume-xmark");
-                icon.classList.add("fa-volume-high");
             } else {
                 video.muted = true;
-                icon.classList.remove("fa-volume-high");
-                icon.classList.add("fa-volume-xmark");
             }
+            updateSoundControl();
         });
+
+        volumeSlider.addEventListener("input", () => {
+            video.volume = Math.max(minimumVolume, Number(volumeSlider.value) / 100);
+            updateSoundControl();
+        });
+
+        video.addEventListener("volumechange", updateSoundControl);
+        updateSoundControl();
     }
 
 

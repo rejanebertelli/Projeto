@@ -351,7 +351,8 @@ img {
     transition: opacity 0.3s ease;
 }
 
-.hero:hover .sound-control {
+.hero:hover .sound-control,
+.hero:focus-within .sound-control {
     opacity: 1;
     pointer-events: auto;
 }
@@ -364,6 +365,53 @@ img {
 
 .sound-toggle:hover {
     background: rgba(0, 0, 0, 0.8);
+}
+
+.sound-volume {
+    position: relative;
+}
+
+.volume-slider-panel {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 8px;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+
+.sound-volume.is-audible:hover .volume-slider-panel,
+.sound-volume.is-audible:has(:focus-visible) .volume-slider-panel {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.volume-slider {
+    display: block;
+    writing-mode: vertical-lr;
+    direction: rtl;
+    width: 30px;
+    height: 140px;
+    padding: 0 4px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.8);
+    accent-color: #fff;
+    cursor: pointer;
+}
+
+.sound-toggle:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+.volume-slider:focus-visible {
+    border-color: #bde4ff;
 }
 
 

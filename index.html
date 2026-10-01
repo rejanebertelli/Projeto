@@ -49,9 +49,15 @@
             
                     <div class="sound-control">
                         <span>Som</span>
-                        <button id="soundToggle" class="sound-toggle" aria-label="Ativar ou desativar som">
-                            <i class="fa-solid fa-volume-xmark"></i>
-                        </button>
+                        <div class="sound-volume">
+                            <button id="soundToggle" class="sound-toggle" aria-label="Ativar som" aria-pressed="false">
+                                <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
+                            </button>
+                            <div class="volume-slider-panel">
+                                <input id="volumeSlider" class="volume-slider" type="range" min="1" max="100"
+                                    step="1" value="100" aria-label="Volume do vídeo" aria-orientation="vertical" disabled>
+                            </div>
+                        </div>
                     </div>
             
                 </div>
