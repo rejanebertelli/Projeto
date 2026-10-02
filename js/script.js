@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const thumbnailContainer = document.querySelector('.thumbnail-gallery');
     const closeModalButton = modal.querySelector('.modal-close');
     const productsGrid = document.querySelector('.products-grid');
+    const video = document.getElementById('heroVideo');
 
     // --- Estado do Zoom e Pan ---
     let scale = 1;
@@ -88,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Funções do Modal e Galeria ---
     const openModal = async (property) => {
+        if (video) video.muted = true;
         thumbnailContainer.innerHTML = ''; // Clear existing thumbnails
 
         // Create a gallery that starts with the home image, and includes the gallery images without duplicates
@@ -143,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         propertiesData.forEach(prop => {
             const propertyCard = document.createElement('article');
             propertyCard.className = 'product-card';
+            propertyCard.dataset.propId = prop.id;
             propertyCard.innerHTML = `
                 <img src="${prop.home}" alt="Fachada do ${prop.name}">
                 <div class="product-info">
@@ -161,12 +164,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Abrir o modal
     productsGrid.addEventListener('click', (e) => {
-        if (e.target.matches('.view-more-button')) {
-            e.preventDefault();
-            const propId = parseInt(e.target.dataset.propId, 10);
-            const property = propertiesData.find(p => p.id === propId);
-            if (property) openModal(property);
-        }
+        const propertyCard = e.target.closest('.product-card');
+        if (!propertyCard) return;
+
+        e.preventDefault();
+        const propId = parseInt(propertyCard.dataset.propId, 10);
+        const property = propertiesData.find(p => p.id === propId);
+        if (property) openModal(property);
     });
 
     // Fechar o modal
@@ -345,7 +349,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listeners for panning will be managed on the document level when panning starts
 
     // --- CONTROLE DE SOM DO VÍDEO HERO ---
-    const video = document.getElementById("heroVideo");
     const soundBtn = document.getElementById("soundToggle");
     const volumeSlider = document.getElementById("volumeSlider");
 
@@ -353,7 +356,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const icon = soundBtn.querySelector("i");
         const volumeControl = soundBtn.closest(".sound-volume");
         const minimumVolume = Number(volumeSlider.min) / 100;
-        let lastAudibleVolume = video.volume || 1;
+        const defaultVolume = 0.5;
 
         const updateSoundControl = () => {
             const audible = !video.muted && video.volume > 0;
@@ -366,13 +369,13 @@ document.addEventListener('DOMContentLoaded', () => {
             icon.classList.toggle("fa-volume-xmark", !audible);
             icon.classList.toggle("fa-volume-low", audible && video.volume < 0.5);
             icon.classList.toggle("fa-volume-high", audible && video.volume >= 0.5);
-            if (video.volume > 0) lastAudibleVolume = video.volume;
         };
 
         soundBtn.addEventListener("click", () => {
             if (video.muted || video.volume === 0) {
-                if (video.volume === 0) video.volume = lastAudibleVolume;
+                video.volume = defaultVolume;
                 video.muted = false;
+                video.play().catch(() => {});
             } else {
                 video.muted = true;
             }
@@ -385,7 +388,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         video.addEventListener("volumechange", updateSoundControl);
+        video.volume = defaultVolume;
+        video.muted = true;
         updateSoundControl();
+        video.play().catch(() => {});
     }
 
 
